@@ -1,1 +1,0 @@
-web: python admin_interview.py
