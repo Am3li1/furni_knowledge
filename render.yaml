@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: furniture-admin
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python admin_interview.py
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_Gws83xXYLjJp@ep-spring-sun-a1wevus7-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+      - key: ADMIN_PASSWORD
+        value: manager123
+      - key: SECRET_KEY
+        value: d2c39ec783012cd2aae0752a92d5184b3d3625962613dcdbc0a088a12d7e9d78
